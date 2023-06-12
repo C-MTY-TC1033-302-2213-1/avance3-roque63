@@ -1,38 +1,37 @@
 //
 //  main.cpp
-//  ExamenTC1030JUNIO2023
+//  Avance3
 //
-//  Created by Ma. Guadalupe Roque Díaz de León on 06/06/23.
+//  Created by Ma. Guadalupe Roque Díaz de León on 11/06/23.
 //
 
 #include <iostream>
-#include "Pedido.h"
+#include "Video.h"
+#include "Poliformismo.h"
+#include "Episodio.h"
+#include "Pelicula.h"
+#include "Serie.h"
 
 int main() {
-    
-    Pedido pedido;
-    int opcion;
-    
-    cin >> opcion;
-    
-    switch (opcion) {
-        case 1:
-            pedido.leerArchivo("Pedido1.csv");
-            break;
-        case 2:
-            pedido.leerArchivo("Pedido2.csv");
-            break;
-        case 3:
-            pedido.leerArchivo("Pedido3.csv");
-            break;
-        case 4:
-            pedido.leerArchivo("Pedido4.csv");
-            break;
-        default:
-            break;
-    }
- 
-    pedido.ticketCliente();
-    
+    // Declaracion de objetos
+    Video viernes{"100", "Computer", 100, "Ing.", 100};
+    Episodio episodio_viernes{"Exito_2023", 100, 100};
+    Pelicula peli{"008", "Tigres_Campeones_8*", 888, "Deportes", 100, 8};
+    Poliformismo neflix;
+
+    // Pruebas de la sobrecarga del operador <<
+    cout << viernes << endl;
+    cout << viernes.str() << endl;
+    cout << peli << endl;
+    cout << peli.str() << endl;
+    cout << episodio_viernes << endl;
+    cout << episodio_viernes.str() << endl;
+
+    neflix.leerArchivo("Inventario1.csv");
+
+    cout << neflix.getPtrVideo(0)->str() << endl;
+    cout << *neflix.arrPtrPeliculas[0] << endl;
+    cout << *neflix.getPtrVideo(0)<< endl;
+
     return 0;
 }
