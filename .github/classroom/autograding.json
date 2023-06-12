@@ -2,7 +2,7 @@
   "tests": [
     {
      "name": "Test 1 - datos de entrada: 1",
-     "setup": "g++ -g -o main main.cpp Producto.cpp Verdura.cpp Combo.cpp Pedido.cpp",
+     "setup": "g++ -g -o main main.cpp Video.cpp Pelicula.cpp Serie.cpp Poliformismo.cpp Episodio.cpp",
      "run": "./main",
      "input": "1",
      "output": "100-Computer-100-Ing.-100.000000\n100 Computer 100 Ing. 100.000000\n008-Tigres_Campeones_8*-888-Deportes-100.000000-8\n008 Tigres_Campeones_8* 888 Deportes 100.000000 8\nExito_2023-100-100\nExito_2023 100 100\n100 P1 100 A 100.000000 1\n100-P1-100-A-100.000000-1\n100-P1-100-A-100.000000\n",

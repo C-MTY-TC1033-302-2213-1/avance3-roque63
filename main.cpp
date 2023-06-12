@@ -27,7 +27,7 @@ int main() {
     cout << episodio_viernes << endl;
     cout << episodio_viernes.str() << endl;
 
-    neflix.leerArchivo("Inventario1.csv");
+    neflix.leerArchivo("InventarioFinal.csv");
 
     cout << neflix.getPtrVideo(0)->str() << endl;
     cout << *neflix.arrPtrPeliculas[0] << endl;
